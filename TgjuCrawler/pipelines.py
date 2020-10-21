@@ -9,6 +9,7 @@ from itemadapter import ItemAdapter
 
 import pymongo
 
+
 class TgjucrawlerPipeline:
 
     def __init__(self):
@@ -17,9 +18,17 @@ class TgjucrawlerPipeline:
             27017
         )
         db = self.conn["price_col"]
-        self.collection = db["sekee_price"]
-
+        self.sekee_collection = db["sekee_price"]
+        self.dollar_collection = db["dollar_price"]
+        self.geram18_collection = db["geram18_price"]
 
     def process_item(self, item, spider):
-        self.collection.insert(dict(item))
-        return item
+        if spider.name in ['sekee', 'last_sekee']:
+            self.sekee_collection.insert(dict(item))
+            return item
+        if spider.name in ['geram18', 'last_geram18']:
+            self.geram18_collection.insert(dict(item))
+            return item
+        if spider.name in ['dollar', 'last_dollar']:
+            self.dollar_collection.insert(dict(item))
+            return item
