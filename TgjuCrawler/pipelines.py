@@ -24,11 +24,11 @@ class TgjucrawlerPipeline:
 
     def process_item(self, item, spider):
         if spider.name in ['sekee', 'last_sekee']:
-            self.sekee_collection.update_one(dict(item), upsert=True)
+            self.sekee_collection.insert_one(dict(item))
             return item
         if spider.name in ['geram18', 'last_geram18']:
-            self.geram18_collection.update_one(dict(item), upsert=True)
+            self.geram18_collection.insert_one(dict(item))
             return item
         if spider.name in ['dollar', 'last_dollar']:
-            self.dollar_collection.update_one(dict(item), upsert=True)
+            self.dollar_collection.insert_one(dict(item))
             return item
