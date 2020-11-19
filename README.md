@@ -1,7 +1,7 @@
 # scrapy-crawler
 A Scrapy crawler for https://www.tgju.org <br>
 Records will be stored using mongodb<br>
-Records are updated daily<br>
+Records will be updated daily<br>
 ## Customization
 You can customize the update time in .env :<br>
 **TIMEZONE='Asia/Tehran'**<br>
