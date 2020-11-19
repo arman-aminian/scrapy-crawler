@@ -1,5 +1,5 @@
 # scrapy-crawler
-A Scrapy crawler for https://www.tgju.org
+A Scrapy crawler for https://www.tgju.org <br>
 Records will be stored using mongodb<br>
 Records are updated daily<br>
 ## Customization
@@ -9,5 +9,5 @@ You can customize the update time in .env :<br>
 **SCHEDULE_MINUTE=30**<br>
 
 ## How to run
-pip3 install -r requirements.txt
+pip3 install -r requirements.txt<br>
 python3 -m TgjuCrawler.scheduler
