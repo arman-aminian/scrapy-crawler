@@ -26,7 +26,7 @@ class TGJUSpider(scrapy.Spider):
         '=true&columns%5B6%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B6%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B7%5D'
         '%5Bdata%5D=7&columns%5B7%5D%5Bname%5D=&columns%5B7%5D%5Bsearchable%5D=true&columns%5B7%5D%5Borderable%5D'
         '=true&columns%5B7%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B7%5D%5Bsearch%5D%5Bregex%5D=false&start=0&length=3081'
-        '&search=&order_col=&order_dir=&from=&to=&convert_to_ad=1&_=1602022756372/']
+        '&search=&order_col=&order_dir=&from=1390%2F01%2F01&to=&convert_to_ad=1&_=1602022756372/']
 
     def parse(self, response, **kwargs):
         item = TgjucrawlerItem()
